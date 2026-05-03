@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///Users/steve_neal/Downloads/coco_fms_4.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coco — Functional Movement Screen — May 1, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Coco — Functional Movement Screen — May 1, 2026_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --ink: #161412;
+    --paper: #f4efe7;
+    --paper-2: #ebe4d7;
+    --rule: #1a1714;
+    --accent: #c4361c;
+    --accent-soft: #f3d9d2;
+    --muted: #6b6258;
+    --good: #2f6b3a;
+    --warn: #b87b1f;
+    --bad: #c4361c;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(196,54,28,0.04) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(22,20,18,0.04) 0%, transparent 40%);
+    min-height: 100vh;
+    padding: 32px 16px 80px;
+  }
+
+  .sheet {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1.5px solid var(--rule);
+    box-shadow: 8px 8px 0 var(--rule);
+    padding: 48px 56px;
+    position: relative;
+  }
+
+  /* ───────────── HEADER ───────────── */
+
+  .masthead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: end;
+    border-bottom: 3px double var(--rule);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+
+  .masthead .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .masthead h1 {
+    font-family: 'Anton', 'Archivo', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-size: clamp(48px, 7vw, 84px);
+    line-height: 0.92;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .masthead h1 em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    text-transform: lowercase;
+    letter-spacing: -0.02em;
+  }
+
+  .masthead .stamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: right;
+    border-left: 1px solid var(--rule);
+    padding-left: 16px;
+  }
+
+  .stamp .label {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* ───────────── SUBJECT BAR ───────────── */
+
+  .subject {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--rule);
+    margin-bottom: 36px;
+    background: var(--paper-2);
+  }
+
+  .subject .cell {
+    padding: 14px 18px;
+    border-right: 1px solid var(--rule);
+  }
+
+  .subject .cell:last-child { border-right: none; }
+
+  .subject .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .subject .value {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .subject input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed var(--rule);
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    width: 100%;
+    padding: 2px 0;
+    outline: none;
+  }
+
+  .subject input:focus {
+    border-bottom-color: var(--accent);
+  }
+
+  /* ───────────── INTRO + SCORING KEY ───────────── */
+
+  .intro {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .intro p {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .intro .lede::first-letter {
+    font-family: 'Anton', sans-serif;
+    font-size: 62px;
+    float: left;
+    line-height: 0.85;
+    padding: 6px 10px 0 0;
+    color: var(--accent);
+  }
+
+  .key {
+    border: 1px solid var(--rule);
+    padding: 16px 18px;
+    background: var(--paper-2);
+  }
+
+  .key h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    color: var(--muted);
+  }
+
+  .key-row {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 12px;
+    margin: 6px 0;
+    align-items: baseline;
+  }
+
+  .key-row .num {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .key-row.k0 .num { color: var(--bad); }
+  .key-row.k1 .num { color: var(--warn); }
+  .key-row.k2 .num { color: var(--ink); }
+  .key-row.k3 .num { color: var(--good); }
+
+  .key-row .desc {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  /* ───────────── CLEARING TESTS ───────────── */
+
+  .clearing {
+    border: 1px solid var(--rule);
+    padding: 18px 22px;
+    margin-bottom: 36px;
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+  }
+
+  .clearing h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+  }
+
+  .clearing .sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .clearing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .clear-card {
+    border: 1px solid var(--rule);
+    padding: 12px 14px;
+    background: var(--paper);
+    font-size: 13px;
+  }
+
+  .clear-card label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .clear-card input[type="checkbox"] {
+    margin-top: 3px;
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .clear-card .ct-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .clear-card .ct-affects {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* ───────────── TEST CARDS ───────────── */
+
+  .test {
+    border: 1px solid var(--rule);
+    margin-bottom: 24px;
+    background: var(--paper);
+    page-break-inside: avoid;
+  }
+
+  .test-header {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: stretch;
+  }
+
+  .test-num {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .test-title {
+    padding: 14px 20px;
+  }
+
+  .test-title h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .test-title .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 4px;
+  }
+
+  .score-display {
+    background: var(--paper-2);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid var(--rule);
+    min-width: 90px;
+    justify-content: center;
+  }
+
+  .score-display .final {
+    font-family: 'Anton', sans-serif;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .score-display.flag-zero .final { color: var(--bad); }
+  .score-display.flag-one .final { color: var(--warn); }
+  .score-display.flag-three .final { color: var(--good); }
+
+  .test-body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+  }
+
+  .criteria {
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+  }
+
+  .criteria h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+
+  .crit-row {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px dotted rgba(22,20,18,0.2);
+  }
+
+  .crit-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .crit-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    line-height: 0.85;
+    text-align: center;
+  }
+
+  .c0 .crit-num { color: var(--bad); }
+  .c1 .crit-num { color: var(--warn); }
+  .c2 .crit-num { color: var(--ink); }
+  .c3 .crit-num { color: var(--good); }
+
+  .crit-content ul {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .crit-content ul li {
+    margin-bottom: 2px;
+  }
+
+  .crit-content .crit-head {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 11px;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .crit-content em.measure {
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    font-size: 12px;
+    background: var(--accent-soft);
+    padding: 1px 5px;
+    border-radius: 2px;
+  }
+
+  /* score input panel */
+
+  .input-panel {
+    padding: 20px 24px;
+    background: var(--paper-2);
+  }
+
+  .input-panel h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+
+  .score-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .score-buttons label {
+    position: relative;
+  }
+
+  .score-buttons input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .score-buttons .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 1.5px solid var(--rule);
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    background: var(--paper);
+    transition: all 0.12s ease;
+    user-select: none;
+  }
+
+  .score-buttons .btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .score-buttons input:checked + .btn {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .score-buttons label[data-val="0"] input:checked + .btn { background: var(--bad); border-color: var(--bad); color: #fff; }
+  .score-buttons label[data-val="1"] input:checked + .btn { background: var(--warn); border-color: var(--warn); color: #fff; }
+  .score-buttons label[data-val="3"] input:checked + .btn { background: var(--good); border-color: var(--good); color: #fff; }
+
+  .side-block {
+    margin-bottom: 12px;
+  }
+
+  .side-block .side-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .asym-flag {
+    display: none;
+    margin-top: 8px;
+    padding: 6px 10px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .asym-flag.show { display: block; }
+
+  .notes-field {
+    width: 100%;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 8px 10px;
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    resize: vertical;
+    min-height: 50px;
+    outline: none;
+  }
+
+  .notes-field:focus {
+    border-color: var(--accent);
+  }
+
+  .notes-label {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 12px 0 4px;
+  }
+
+  /* ───────────── TOTAL ───────────── */
+
+  .total {
+    margin-top: 36px;
+    border: 2px solid var(--rule);
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .total .label-block {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(244,239,231,0.6);
+    line-height: 1.4;
+  }
+
+  .total .label-block strong {
+    color: var(--paper);
+    font-weight: 400;
+  }
+
+  .total .big-score {
+    font-family: 'Anton', sans-serif;
+    font-size: 120px;
+    line-height: 0.85;
+    text-align: center;
+  }
+
+  .total .big-score .denom {
+    color: rgba(244,239,231,0.4);
+    font-size: 60px;
+  }
+
+  .total .summary {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.7;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .total .summary .row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted rgba(244,239,231,0.2);
+    padding: 2px 0;
+  }
+
+  .total .summary .row.flag {
+    color: var(--accent);
+  }
+
+  /* ───────────── ACTION BAR ───────────── */
+
+  .actions {
+    position: sticky;
+    bottom: 16px;
+    margin-top: 24px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 12px 16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 4px 4px 0 var(--rule);
+    z-index: 10;
+  }
+
+  .actions .hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-left: auto;
+  }
+
+  .actions button {
+    background: var(--paper);
+    border: 1.5px solid var(--rule);
+    padding: 8px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .actions button:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .actions button.primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  .actions button.primary:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+
+  /* ───────────── FOOTER ───────────── */
+
+  .colophon {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* ───────────── PROGRAM ───────────── */
+
+  .program {
+    margin-top: 36px;
+    border: 1.5px solid var(--rule);
+    background: var(--paper);
+  }
+
+  .program[hidden] { display: none; }
+
+  .program-head {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: end;
+    border-bottom: 3px double var(--paper);
+  }
+
+  .program-head .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(244,239,231,0.6);
+    margin-bottom: 6px;
+  }
+
+  .program-head h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .program-head h2 em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    text-transform: lowercase;
+    letter-spacing: -0.02em;
+  }
+
+  .program-head .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: right;
+    color: rgba(244,239,231,0.7);
+  }
+
+  .program-body {
+    padding: 28px 32px;
+  }
+
+  .program-banner {
+    border: 1.5px solid var(--bad);
+    background: var(--accent-soft);
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .program-banner strong {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bad);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .program-priority {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    padding: 14px 18px;
+    margin-bottom: 28px;
+  }
+
+  .program-priority h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 8px;
+  }
+
+  .program-priority ol {
+    margin: 0;
+    padding-left: 20px;
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .program-priority ol li strong {
+    font-weight: 600;
+  }
+
+  .program-priority ol li .badge {
+    display: inline-block;
+    margin-left: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    background: var(--ink);
+    color: var(--paper);
+    letter-spacing: 0.06em;
+    vertical-align: middle;
+  }
+
+  .program-priority ol li .badge.warn { background: var(--warn); }
+  .program-priority ol li .badge.bad { background: var(--bad); }
+
+  .program-block {
+    border-top: 1px solid var(--rule);
+    padding: 24px 0;
+    page-break-inside: avoid;
+  }
+
+  .program-block:first-of-type { border-top: none; padding-top: 0; }
+
+  .pb-head {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .pb-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    line-height: 0.85;
+    color: var(--accent);
+  }
+
+  .pb-title h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .pb-title .why {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .pb-score {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  .pb-score .num {
+    font-family: 'Anton', sans-serif;
+    font-size: 28px;
+    display: block;
+    line-height: 1;
+  }
+
+  .pb-score .num.s0 { color: var(--bad); }
+  .pb-score .num.s1 { color: var(--warn); }
+  .pb-score .num.s2 { color: var(--ink); }
+
+  .pb-asym {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+  }
+
+  .pb-exercises {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: ex;
+  }
+
+  .pb-exercises li {
+    counter-increment: ex;
+    padding: 16px 0;
+    border-bottom: 1px dotted rgba(22,20,18,0.18);
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+
+  .pb-exercises li:last-child { border-bottom: none; }
+
+  .pb-exercises li::before {
+    content: counter(ex, decimal-leading-zero);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    padding-top: 8px;
+  }
+
+  .ex-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .ex-head-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+  }
+
+  /* Inline-editable name input — looks like text, hover hints editability */
+  .ex-name-input {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed transparent;
+    padding: 2px 0;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+
+  .ex-name-input:hover {
+    border-bottom-color: rgba(22,20,18,0.3);
+  }
+
+  .ex-name-input:focus {
+    border-bottom-color: var(--accent);
+    background: var(--paper-2);
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  /* Reusable small icon button */
+  .ico-btn {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(22,20,18,0.25);
+    color: var(--muted);
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+    transition: all 0.12s ease;
+    flex-shrink: 0;
+  }
+
+  .ico-btn:hover {
+    background: var(--bad);
+    color: #fff;
+    border-color: var(--bad);
+  }
+
+  .ex-cue {
+    display: block;
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+
+  .ex-controls-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2px;
+  }
+
+  .ex-field {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid var(--rule);
+    background: var(--paper-2);
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  .ex-field .lab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 8px;
+    background: var(--paper);
+    border-right: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .ex-field input {
+    border: none;
+    background: transparent;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    padding: 6px 8px;
+    outline: none;
+    color: var(--ink);
+    font-weight: 600;
+    min-width: 0;
+  }
+
+  .ex-field input:focus { background: #fff; }
+  .ex-field.sets input { width: 42px; text-align: center; }
+  .ex-field.reps input { width: 130px; }
+  .ex-field.video { flex: 1; min-width: 0; }
+  .ex-field.video input { flex: 1; min-width: 0; width: 100%; }
+
+  /* Video section — list of up to 3 video rows */
+  .video-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .video-row {
+    display: flex;
+    gap: 6px;
+    align-items: stretch;
+  }
+
+  .ex-video-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: auto;
+    min-height: 32px;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    border: 1px solid var(--rule);
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .ex-video-link:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .ex-video-link.empty {
+    background: transparent;
+    color: var(--muted);
+    border-style: dashed;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .ex-video-link svg { width: 14px; height: 14px; }
+
+  .video-add {
+    align-self: flex-start;
+    background: transparent;
+    border: 1px dashed rgba(22,20,18,0.35);
+    padding: 4px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.12s ease;
+  }
+
+  .video-add:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+    background: var(--paper-2);
+  }
+
+  /* Removed exercises section at the bottom of each block */
+  .removed-list {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: rgba(22,20,18,0.04);
+    border: 1px dashed rgba(22,20,18,0.2);
+  }
+
+  .removed-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .removed-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 4px 0;
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .removed-row strong {
+    font-weight: 600;
+    text-decoration: line-through;
+  }
+
+  .ex-restore {
+    background: transparent;
+    border: 1px solid var(--rule);
+    padding: 3px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.12s ease;
+    font-style: normal;
+  }
+
+  .ex-restore:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .program-empty {
+    padding: 32px;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .program-clean {
+    background: linear-gradient(180deg, var(--paper) 0%, #e8efe5 100%);
+    border: 1.5px solid var(--good);
+    padding: 24px;
+    text-align: center;
+  }
+
+  .program-clean .big {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    color: var(--good);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+
+  .program-clean .small {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  /* ───────────── RESPONSIVE ───────────── */
+
+  @media (max-width: 860px) {
+    .sheet { padding: 28px 22px; box-shadow: 4px 4px 0 var(--rule); }
+    .masthead { grid-template-columns: 1fr; }
+    .masthead .stamp { text-align: left; border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 8px; }
+    .subject { grid-template-columns: repeat(2, 1fr); }
+    .subject .cell { border-bottom: 1px solid var(--rule); }
+    .subject .cell:nth-child(2) { border-right: none; }
+    .intro { grid-template-columns: 1fr; }
+    .clearing-grid { grid-template-columns: 1fr; }
+    .test-body { grid-template-columns: 1fr; }
+    .criteria { border-right: none; border-bottom: 1px solid var(--rule); }
+    .total { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+    .total .big-score { font-size: 88px; }
+    .program-head { grid-template-columns: 1fr; }
+    .program-head .meta { text-align: left; }
+    .program-body { padding: 20px; }
+    .pb-head { grid-template-columns: auto 1fr; }
+    .pb-score { grid-column: 1 / -1; text-align: left; }
+    .pb-exercises li { grid-template-columns: 24px 1fr; }
+    .ex-controls-row { gap: 6px; }
+    .ex-field.reps input { width: 100px; }
+  }
+
+  /* ───────────── PRINT ───────────── */
+
+  @media print {
+    body { background: white; padding: 0; }
+    .sheet { box-shadow: none; border: none; padding: 16px; max-width: 100%; }
+    .actions { display: none; }
+    .test { break-inside: avoid; }
+    .total { background: white; color: black; border: 2px solid black; }
+    .total .label-block, .total .summary, .total .big-score .denom { color: #333; }
+
+    /* Editable name input prints as plain text */
+    .ex-name-input {
+      border: none !important;
+      background: transparent !important;
+      padding: 0 !important;
+    }
+    /* Hide editing controls in print */
+    .ex-delete,
+    .ex-restore,
+    .video-add,
+    .video-remove,
+    .removed-list { display: none !important; }
+    /* Field labels print muted but visible */
+    .ex-field { background: white; }
+    .ex-field .lab { background: #f5f5f5; }
+    /* Show video URLs as plain text under each exercise */
+    .ex-field.video input { color: #555; }
+    .ex-video-link { background: #333 !important; color: white !important; }
+    .program-block { break-inside: avoid; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet" id="sheet">
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div>
+      <div class="eyebrow">Functional Movement Screen · Score Sheet</div>
+      <h1>The <em>Coco</em><br>Screen</h1>
+    </div>
+    <div class="stamp">
+      <div><span class="label">Date</span><br>May 1, 2026</div>
+      <div style="margin-top:8px"><span class="label">Total / 21</span><br><span id="stampTotal">10/21</span></div>
+    </div>
+  </header>
+
+  <!-- Subject details -->
+  <div class="subject">
+    <div class="cell">
+      <div class="label">Athlete</div>
+      <div class="value">Coco</div>
+    </div>
+    <div class="cell">
+      <div class="label">Hand Length</div>
+      <div class="value">16.5 <span style="font-size:14px;color:var(--muted)">cm</span></div>
+    </div>
+    <div class="cell">
+      <div class="label">Tibia Length</div>
+      <div class="value">44.5 <span style="font-size:14px;color:var(--muted)">cm</span></div>
+    </div>
+    <div class="cell">
+      <div class="label">Screened By</div>
+      <input type="text" id="screener" placeholder="Initials">
+    </div>
+  </div>
+
+  <!-- Intro + Key -->
+  <section class="intro">
+    <p class="lede">The Functional Movement Screen rates seven core movement patterns plus three pain-clearing tests. Each pattern is graded 0&nbsp;–&nbsp;3. Asymmetric tests (sides scored separately) take the <strong>lower</strong> of the two sides. Anything scoring a 1 — or any pain — flags a corrective priority before loading.</p>
+    <div class="key">
+      <h3>Scoring Key</h3>
+      <div class="key-row k3"><span class="num">3</span><span class="desc">Performs perfectly without compensation.</span></div>
+      <div class="key-row k2"><span class="num">2</span><span class="desc">Completes the pattern but with compensation.</span></div>
+      <div class="key-row k1"><span class="num">1</span><span class="desc">Cannot perform the pattern as prescribed.</span></div>
+      <div class="key-row k0"><span class="num">0</span><span class="desc">Pain at any point during the test or its clearing.</span></div>
+    </div>
+  </section>
+
+  <!-- Clearing tests -->
+  <section class="clearing">
+    <h2>Pain Clearing Tests</h2>
+    <div class="sub">Mark any test that produces pain — the linked movement is automatically scored 0.</div>
+    <div class="clearing-grid">
+      <div class="clear-card">
+        <label>
+          <input type="checkbox" id="clearShoulder" data-target="shoulder">
+          <span>
+            <span class="ct-name">Shoulder Impingement</span>
+            Hand to opposite shoulder, lift elbow upward.
+            <span class="ct-affects">Zeros · Test 4</span>
+          </span>
+        </label>
+      </div>
+      <div class="clear-card">
+        <label>
+          <input type="checkbox" id="clearExtension" data-target="pushup">
+          <span>
+            <span class="ct-name">Spinal Extension</span>
+            Press-up from prone, hips on floor, arms extended.
+            <span class="ct-affects">Zeros · Test 6</span>
+          </span>
+        </label>
+      </div>
+      <div class="clear-card">
+        <label>
+          <input type="checkbox" id="clearFlexion" data-target="rotary">
+          <span>
+            <span class="ct-name">Spinal Flexion</span>
+            Posterior rocking from quadruped, chest to thighs.
+            <span class="ct-affects">Zeros · Test 7</span>
+          </span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ TEST 1: DEEP SQUAT ════════ -->
+  <article class="test" data-test="squat" data-symmetric="true">
+    <div class="test-header">
+      <div class="test-num">1</div>
+      <div class="test-title">
+        <h2>Deep Squat</h2>
+        <div class="tag">Bilateral · Symmetrical, full-body mechanics</div>
+      </div>
+      <div class="score-display flag-one"><div class="final">1</div></div>
+    </div>
+    <div class="test-body">
+      <div class="criteria">
+        <h3>Scoring Criteria</h3>
+        <div class="crit-row c3"><div class="crit-num">3</div><div class="crit-content">
+          <span class="crit-head">Optimal — Heels Flat</span>
+          <ul>
+            <li>Upper torso parallel with tibia or toward vertical</li>
+            <li>Femur below horizontal</li>
+            <li>Knees aligned over feet</li>
+            <li>Dowel aligned over feet</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c2"><div class="crit-num">2</div><div class="crit-content">
+          <span class="crit-head">Compensated — Heels Elevated</span>
+          <ul>
+            <li>All criteria above met, but only with heels on a 2x6 board</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c1"><div class="crit-num">1</div><div class="crit-content">
+          <span class="crit-head">Dysfunctional</span>
+          <ul>
+            <li>Tibia and torso not parallel</li>
+            <li>Femur not below horizontal</li>
+            <li>Knees not aligned over feet</li>
+            <li>Lumbar flexion noted (even with heels elevated)</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c0"><div class="crit-num">0</div><div class="crit-content">
+          <span class="crit-head">Pain</span>
+          <ul><li>Pain anywhere during the movement</li></ul>
+        </div></div>
+      </div>
+      <div class="input-panel">
+        <h3>Score</h3>
+        <div class="score-buttons" data-side="single">
+          <label data-val="0"><input type="radio" name="squat"><span class="btn">0</span></label>
+          <label data-val="1"><input type="radio" name="squat"><span class="btn">1</span></label>
+          <label data-val="2"><input type="radio" name="squat"><span class="btn">2</span></label>
+          <label data-val="3"><input type="radio" name="squat"><span class="btn">3</span></label>
+        </div>
+        <label class="notes-label">Notes</label>
+        <textarea class="notes-field" data-test="squat"></textarea>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════ TEST 2: HURDLE STEP ════════ -->
+  <article class="test" data-test="hurdle" data-symmetric="false">
+    <div class="test-header">
+      <div class="test-num">2</div>
+      <div class="test-title">
+        <h2>Hurdle Step</h2>
+        <div class="tag">Asymmetrical · Hurdle set to <em>44.5&nbsp;cm</em> (tibia tuberosity)</div>
+      </div>
+      <div class="score-display"><div class="final">2</div></div>
+    </div>
+    <div class="test-body">
+      <div class="criteria">
+        <h3>Scoring Criteria</h3>
+        <div class="crit-row c3"><div class="crit-num">3</div><div class="crit-content">
+          <span class="crit-head">Optimal</span>
+          <ul>
+            <li>Hips, knees, and ankles remain aligned in the sagittal plane</li>
+            <li>Minimal to no movement in the lumbar spine</li>
+            <li>Dowel and hurdle remain parallel</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c2"><div class="crit-num">2</div><div class="crit-content">
+          <span class="crit-head">Compensated</span>
+          <ul>
+            <li>Alignment lost between hips, knees, and ankles</li>
+            <li>Movement noted in the lumbar spine</li>
+            <li>Dowel and hurdle do not remain parallel</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c1"><div class="crit-num">1</div><div class="crit-content">
+          <span class="crit-head">Dysfunctional</span>
+          <ul>
+            <li>Foot makes contact with the hurdle</li>
+            <li>Loss of balance is noted</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c0"><div class="crit-num">0</div><div class="crit-content">
+          <span class="crit-head">Pain</span>
+          <ul><li>Pain anywhere during the movement</li></ul>
+        </div></div>
+      </div>
+      <div class="input-panel">
+        <h3>Score (lower side counts)</h3>
+        <div class="side-block">
+          <div class="side-label">Left</div>
+          <div class="score-buttons" data-side="left">
+            <label data-val="0"><input type="radio" name="hurdle-L"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="hurdle-L"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="hurdle-L"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="hurdle-L"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="side-block">
+          <div class="side-label">Right</div>
+          <div class="score-buttons" data-side="right">
+            <label data-val="0"><input type="radio" name="hurdle-R"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="hurdle-R"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="hurdle-R"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="hurdle-R"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="asym-flag" data-flag="hurdle">⚠ Asymmetry detected</div>
+        <label class="notes-label">Notes</label>
+        <textarea class="notes-field" data-test="hurdle"></textarea>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════ TEST 3: INLINE LUNGE ════════ -->
+  <article class="test" data-test="lunge" data-symmetric="false">
+    <div class="test-header">
+      <div class="test-num">3</div>
+      <div class="test-title">
+        <h2>Inline Lunge</h2>
+        <div class="tag">Asymmetrical · Stride set to <em>44.5&nbsp;cm</em> (tibia length)</div>
+      </div>
+      <div class="score-display"><div class="final">2</div></div>
+    </div>
+    <div class="test-body">
+      <div class="criteria">
+        <h3>Scoring Criteria</h3>
+        <div class="crit-row c3"><div class="crit-num">3</div><div class="crit-content">
+          <span class="crit-head">Optimal</span>
+          <ul>
+            <li>Dowel contacts (head, thoracic spine, sacrum) maintained</li>
+            <li>Dowel remains vertical</li>
+            <li>No torso movement</li>
+            <li>Dowel and feet remain in sagittal plane</li>
+            <li>Knee touches board behind heel of front foot</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c2"><div class="crit-num">2</div><div class="crit-content">
+          <span class="crit-head">Compensated</span>
+          <ul>
+            <li>One or more of the optimal criteria are lost</li>
+            <li>Dowel may shift, torso may rotate, or knee fails to reach the board</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c1"><div class="crit-num">1</div><div class="crit-content">
+          <span class="crit-head">Dysfunctional</span>
+          <ul><li>Loss of balance during the movement</li></ul>
+        </div></div>
+        <div class="crit-row c0"><div class="crit-num">0</div><div class="crit-content">
+          <span class="crit-head">Pain</span>
+          <ul><li>Pain anywhere during the movement</li></ul>
+        </div></div>
+      </div>
+      <div class="input-panel">
+        <h3>Score (lower side counts)</h3>
+        <div class="side-block">
+          <div class="side-label">Left foot forward</div>
+          <div class="score-buttons" data-side="left">
+            <label data-val="0"><input type="radio" name="lunge-L"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="lunge-L"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="lunge-L"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="lunge-L"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="side-block">
+          <div class="side-label">Right foot forward</div>
+          <div class="score-buttons" data-side="right">
+            <label data-val="0"><input type="radio" name="lunge-R"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="lunge-R"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="lunge-R"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="lunge-R"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="asym-flag" data-flag="lunge">⚠ Asymmetry detected</div>
+        <label class="notes-label">Notes</label>
+        <textarea class="notes-field" data-test="lunge"></textarea>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════ TEST 4: SHOULDER MOBILITY ════════ -->
+  <article class="test" data-test="shoulder" data-symmetric="false">
+    <div class="test-header">
+      <div class="test-num">4</div>
+      <div class="test-title">
+        <h2>Shoulder Mobility</h2>
+        <div class="tag">Asymmetrical · Hand length <em>16.5&nbsp;cm</em> drives thresholds</div>
+      </div>
+      <div class="score-display"><div class="final">2</div></div>
+    </div>
+    <div class="test-body">
+      <div class="criteria">
+        <h3>Scoring Criteria — Distance Between Fists</h3>
+        <div class="crit-row c3"><div class="crit-num">3</div><div class="crit-content">
+          <span class="crit-head">Optimal</span>
+          <ul>
+            <li>Fists within <em class="measure">≤ 16.5 cm</em> (one hand length)</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c2"><div class="crit-num">2</div><div class="crit-content">
+          <span class="crit-head">Compensated</span>
+          <ul>
+            <li>Fists within <em class="measure">≤ 24.75 cm</em> (1.5 hand lengths)</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c1"><div class="crit-num">1</div><div class="crit-content">
+          <span class="crit-head">Dysfunctional</span>
+          <ul>
+            <li>Fists more than <em class="measure">&gt; 24.75 cm</em> apart (greater than 1.5 hand lengths)</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c0"><div class="crit-num">0</div><div class="crit-content">
+          <span class="crit-head">Pain</span>
+          <ul><li>Positive shoulder impingement clearing test</li></ul>
+        </div></div>
+      </div>
+      <div class="input-panel">
+        <h3>Score (lower side counts)</h3>
+        <div class="side-block">
+          <div class="side-label">Left (R hand reaches up &amp; over)</div>
+          <div class="score-buttons" data-side="left">
+            <label data-val="0"><input type="radio" name="shoulder-L"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="shoulder-L"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="shoulder-L"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="shoulder-L"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="side-block">
+          <div class="side-label">Right (L hand reaches up &amp; over)</div>
+          <div class="score-buttons" data-side="right">
+            <label data-val="0"><input type="radio" name="shoulder-R"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="shoulder-R"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="shoulder-R"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="shoulder-R"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="asym-flag" data-flag="shoulder">⚠ Asymmetry detected</div>
+        <label class="notes-label">Distance measured (cm) &amp; notes</label>
+        <textarea class="notes-field" data-test="shoulder"></textarea>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════ TEST 5: ASLR ════════ -->
+  <article class="test" data-test="aslr" data-symmetric="false">
+    <div class="test-header">
+      <div class="test-num">5</div>
+      <div class="test-title">
+        <h2>Active Straight-Leg Raise</h2>
+        <div class="tag">Asymmetrical · Supine, opposite leg neutral on floor</div>
+      </div>
+      <div class="score-display flag-one"><div class="final">1</div></div>
+    </div>
+    <div class="test-body">
+      <div class="criteria">
+        <h3>Scoring Criteria — Vertical Line of Malleolus</h3>
+        <div class="crit-row c3"><div class="crit-num">3</div><div class="crit-content">
+          <span class="crit-head">Optimal</span>
+          <ul>
+            <li>Malleolus reaches between <strong>mid-thigh and ASIS</strong></li>
+            <li>Non-moving limb's malleolus stays in neutral</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c2"><div class="crit-num">2</div><div class="crit-content">
+          <span class="crit-head">Compensated</span>
+          <ul>
+            <li>Malleolus reaches between <strong>mid-thigh and joint line</strong></li>
+            <li>Non-moving limb's malleolus stays in neutral</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c1"><div class="crit-num">1</div><div class="crit-content">
+          <span class="crit-head">Dysfunctional</span>
+          <ul>
+            <li>Malleolus does not reach the joint line</li>
+            <li>Or non-moving limb compensates by externally rotating</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c0"><div class="crit-num">0</div><div class="crit-content">
+          <span class="crit-head">Pain</span>
+          <ul><li>Pain anywhere during the movement</li></ul>
+        </div></div>
+      </div>
+      <div class="input-panel">
+        <h3>Score (lower side counts)</h3>
+        <div class="side-block">
+          <div class="side-label">Left leg raise</div>
+          <div class="score-buttons" data-side="left">
+            <label data-val="0"><input type="radio" name="aslr-L"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="aslr-L"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="aslr-L"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="aslr-L"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="side-block">
+          <div class="side-label">Right leg raise</div>
+          <div class="score-buttons" data-side="right">
+            <label data-val="0"><input type="radio" name="aslr-R"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="aslr-R"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="aslr-R"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="aslr-R"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="asym-flag" data-flag="aslr">⚠ Asymmetry detected</div>
+        <label class="notes-label">Notes</label>
+        <textarea class="notes-field" data-test="aslr"></textarea>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════ TEST 6: TRUNK STABILITY PUSH-UP ════════ -->
+  <article class="test" data-test="pushup" data-symmetric="true">
+    <div class="test-header">
+      <div class="test-num">6</div>
+      <div class="test-title">
+        <h2>Trunk Stability Push-Up</h2>
+        <div class="tag">Bilateral · One rep at the prescribed hand height</div>
+      </div>
+      <div class="score-display flag-one"><div class="final">1</div></div>
+    </div>
+    <div class="test-body">
+      <div class="criteria">
+        <h3>Scoring Criteria (women's standard)</h3>
+        <div class="crit-row c3"><div class="crit-num">3</div><div class="crit-content">
+          <span class="crit-head">Optimal — Thumbs at Chin</span>
+          <ul>
+            <li>One rep with thumbs aligned with the chin</li>
+            <li>Body lifts as a single unit, no lag in lumbar spine</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c2"><div class="crit-num">2</div><div class="crit-content">
+          <span class="crit-head">Compensated — Thumbs at Clavicle</span>
+          <ul>
+            <li>One rep with thumbs aligned with the clavicle</li>
+            <li>Body still lifts as a single unit</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c1"><div class="crit-num">1</div><div class="crit-content">
+          <span class="crit-head">Dysfunctional</span>
+          <ul>
+            <li>Cannot perform one rep with thumbs at the clavicle</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c0"><div class="crit-num">0</div><div class="crit-content">
+          <span class="crit-head">Pain</span>
+          <ul><li>Positive spinal extension clearing test (press-up)</li></ul>
+        </div></div>
+      </div>
+      <div class="input-panel">
+        <h3>Score</h3>
+        <div class="score-buttons" data-side="single">
+          <label data-val="0"><input type="radio" name="pushup"><span class="btn">0</span></label>
+          <label data-val="1"><input type="radio" name="pushup"><span class="btn">1</span></label>
+          <label data-val="2"><input type="radio" name="pushup"><span class="btn">2</span></label>
+          <label data-val="3"><input type="radio" name="pushup"><span class="btn">3</span></label>
+        </div>
+        <label class="notes-label">Notes</label>
+        <textarea class="notes-field" data-test="pushup"></textarea>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════ TEST 7: ROTARY STABILITY ════════ -->
+  <article class="test" data-test="rotary" data-symmetric="false">
+    <div class="test-header">
+      <div class="test-num">7</div>
+      <div class="test-title">
+        <h2>Rotary Stability</h2>
+        <div class="tag">Asymmetrical · Quadruped on a 2x6 board</div>
+      </div>
+      <div class="score-display flag-one"><div class="final">1</div></div>
+    </div>
+    <div class="test-body">
+      <div class="criteria">
+        <h3>Scoring Criteria</h3>
+        <div class="crit-row c3"><div class="crit-num">3</div><div class="crit-content">
+          <span class="crit-head">Optimal — Unilateral Rep</span>
+          <ul>
+            <li>Same-side arm and leg lift, then knee touches elbow over the board</li>
+            <li>Spine stays parallel to the board</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c2"><div class="crit-num">2</div><div class="crit-content">
+          <span class="crit-head">Compensated — Diagonal Rep</span>
+          <ul>
+            <li>Opposite-side arm and leg lift; knee touches elbow over the board</li>
+            <li>Spine stays parallel to the board</li>
+          </ul>
+        </div></div>
+        <div class="crit-row c1"><div class="crit-num">1</div><div class="crit-content">
+          <span class="crit-head">Dysfunctional</span>
+          <ul><li>Unable to perform a diagonal rep</li></ul>
+        </div></div>
+        <div class="crit-row c0"><div class="crit-num">0</div><div class="crit-content">
+          <span class="crit-head">Pain</span>
+          <ul><li>Positive spinal flexion clearing test (posterior rocking)</li></ul>
+        </div></div>
+      </div>
+      <div class="input-panel">
+        <h3>Score (lower side counts)</h3>
+        <div class="side-block">
+          <div class="side-label">Left side</div>
+          <div class="score-buttons" data-side="left">
+            <label data-val="0"><input type="radio" name="rotary-L"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="rotary-L"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="rotary-L"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="rotary-L"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="side-block">
+          <div class="side-label">Right side</div>
+          <div class="score-buttons" data-side="right">
+            <label data-val="0"><input type="radio" name="rotary-R"><span class="btn">0</span></label>
+            <label data-val="1"><input type="radio" name="rotary-R"><span class="btn">1</span></label>
+            <label data-val="2"><input type="radio" name="rotary-R"><span class="btn">2</span></label>
+            <label data-val="3"><input type="radio" name="rotary-R"><span class="btn">3</span></label>
+          </div>
+        </div>
+        <div class="asym-flag" data-flag="rotary">⚠ Asymmetry detected</div>
+        <label class="notes-label">Notes</label>
+        <textarea class="notes-field" data-test="rotary"></textarea>
+      </div>
+    </div>
+  </article>
+
+  <!-- TOTAL -->
+  <section class="total">
+    <div class="label-block">
+      <strong>FMS Composite</strong><br>
+      Sum of seven test scores.<br>
+      Asymmetric tests use the lower side.<br>
+      Any score of 0 or 1 is a corrective priority.
+    </div>
+    <div class="big-score">
+      <span id="totalNum">10</span><span class="denom"> / 21</span>
+    </div>
+    <div class="summary" id="summaryBox">
+      <div class="row"><span>Tests scored</span><span id="testsScored">7/7</span></div>
+      <div class="row"><span>Asymmetries</span><span id="asymCount">0</span></div>
+      <div class="row"><span>Pain (0s)</span><span id="painCount">0</span></div>
+      <div class="row flag"><span>Below 2</span><span id="lowCount">4</span></div>
+    </div>
+  </section>
+
+  <!-- PROGRAM (corrective recommendations) -->
+  <section class="program" id="program">
+    <div class="program-head">
+      <div>
+        <div class="eyebrow">Personalized Corrective Program</div>
+        <h2>The <em>Coco</em><br>Prescription</h2>
+      </div>
+      <div class="meta">
+        <div>Generated · <span id="progDate">May 2, 2026</span></div>
+        <div id="progScoreLine">Composite 10 / 21 · 7/7 tests scored</div>
+      </div>
+    </div>
+    <div class="program-body" id="programBody"><div class="program-priority">
+        <h3>Priority Order — Work in This Sequence</h3>
+        <ol><li><strong>Active Straight-Leg Raise</strong> <span class="badge warn">score 1</span></li><li><strong>Shoulder Mobility</strong> <span class="badge">score 2</span></li><li><strong>Rotary Stability</strong> <span class="badge warn">score 1</span></li><li><strong>Trunk Stability Push-Up</strong> <span class="badge warn">score 1</span></li><li><strong>Hurdle Step</strong> <span class="badge">score 2</span></li><li><strong>Inline Lunge</strong> <span class="badge">score 2</span></li><li><strong>Deep Squat</strong> <span class="badge warn">score 1</span></li></ol>
+      </div><div class="program-block" id="block-aslr">
+      <div class="pb-head">
+        <div class="pb-num">01</div>
+        <div class="pb-title">
+          <h3>Active Straight-Leg Raise</h3>
+          <div class="why">Posterior-chain mobility on the moving leg + anterior core stability on the down leg.</div>
+        </div>
+        <div class="pb-score">
+          <span class="num s1">1</span>
+          dysfunctional
+        </div>
+      </div>
+      
+      <ol class="pb-exercises">
+        <li data-test-id="aslr" data-ex-name="Supine hamstring stretch with strap">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Supine hamstring stretch with strap" data-test-id="aslr" data-ex-name="Supine hamstring stretch with strap" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="aslr" data-ex-name="Supine hamstring stretch with strap" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Knee straight, opposite leg pinned to floor</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="3" data-test-id="aslr" data-ex-name="Supine hamstring stretch with strap" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="30 s / side" data-test-id="aslr" data-ex-name="Supine hamstring stretch with strap" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="aslr-supine-hamstring-stretch-with-strap">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="" data-test-id="aslr" data-ex-name="Supine hamstring stretch with strap" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link" href="https://cdn.jwplayer.com/previews/hb57wu7z?exp=1777810407&amp;sig=6cfc556a085315f11a8b18dff506aef4" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="aslr" data-ex-name="Supine hamstring stretch with strap">+ Add video link</button>
+    </div>
+      </div>
+    </li><li data-test-id="aslr" data-ex-name="Banded leg lowering">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="McGill Big 3" data-test-id="aslr" data-ex-name="Banded leg lowering" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="aslr" data-ex-name="Banded leg lowering" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Strap around foot, slow eccentric, low back flat</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="aslr" data-ex-name="Banded leg lowering" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="8 / side" data-test-id="aslr" data-ex-name="Banded leg lowering" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="aslr-banded-leg-lowering">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://youtu.be/LB3e4JBpNrw?si=dUQsLplvs1GES5_T" data-test-id="aslr" data-ex-name="Banded leg lowering" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link " href="https://youtu.be/LB3e4JBpNrw?si=dUQsLplvs1GES5_T" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      <button type="button" class="ico-btn video-remove" data-test-id="aslr" data-ex-name="Banded leg lowering" data-video-index="0" title="Remove this video slot">×</button>
+    </div><div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V2</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://youtu.be/3nhAkkzh738?si=cq8wYZXC2VkE8Jbm" data-test-id="aslr" data-ex-name="Banded leg lowering" data-key="video" data-video-index="1">
+      </div>
+      <a class="ex-video-link " href="https://youtu.be/3nhAkkzh738?si=cq8wYZXC2VkE8Jbm" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      <button type="button" class="ico-btn video-remove" data-test-id="aslr" data-ex-name="Banded leg lowering" data-video-index="1" title="Remove this video slot">×</button>
+    </div><div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V3</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://youtu.be/Sy7RkVyLSfw?si=vEo_0Ioe9XbQZD5O" data-test-id="aslr" data-ex-name="Banded leg lowering" data-key="video" data-video-index="2">
+      </div>
+      <a class="ex-video-link " href="https://youtu.be/Sy7RkVyLSfw?si=vEo_0Ioe9XbQZD5O" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      <button type="button" class="ico-btn video-remove" data-test-id="aslr" data-ex-name="Banded leg lowering" data-video-index="2" title="Remove this video slot">×</button>
+    </div>
+      
+    </div>
+      </div>
+    </li>
+      </ol>
+      <div class="removed-list">
+        <div class="removed-header">Removed (2)</div>
+        <div class="removed-row" data-test-id="aslr" data-ex-name="Dead bug">
+      <span>Removed: <strong>Dead bug</strong></span>
+      <button type="button" class="ex-restore" data-test-id="aslr" data-ex-name="Dead bug">Undo</button>
+    </div><div class="removed-row" data-test-id="aslr" data-ex-name="90/90 hip switches">
+      <span>Removed: <strong>90/90 hip switches</strong></span>
+      <button type="button" class="ex-restore" data-test-id="aslr" data-ex-name="90/90 hip switches">Undo</button>
+    </div>
+      </div>
+    </div><div class="program-block" id="block-shoulder">
+      <div class="pb-head">
+        <div class="pb-num">02</div>
+        <div class="pb-title">
+          <h3>Shoulder Mobility</h3>
+          <div class="why">Thoracic spine extension/rotation and shoulder capsule mobility.</div>
+        </div>
+        <div class="pb-score">
+          <span class="num s2">2</span>
+          compensated
+        </div>
+      </div>
+      
+      <ol class="pb-exercises">
+        <li data-test-id="shoulder" data-ex-name="Quadruped T-spine rotation">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Quadruped T-spine rotation" data-test-id="shoulder" data-ex-name="Quadruped T-spine rotation" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="shoulder" data-ex-name="Quadruped T-spine rotation" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Hand behind head, rotate elbow up</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="shoulder" data-ex-name="Quadruped T-spine rotation" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="8 / side" data-test-id="shoulder" data-ex-name="Quadruped T-spine rotation" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="shoulder-quadruped-t-spine-rotation">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://cdn.jwplayer.com/previews/EaNuMJba?exp=1777808949&amp;sig=b2e06c34a98d7626f8a430534aca54fa" data-test-id="shoulder" data-ex-name="Quadruped T-spine rotation" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link " href="https://cdn.jwplayer.com/previews/EaNuMJba?exp=1777808949&amp;sig=b2e06c34a98d7626f8a430534aca54fa" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="shoulder" data-ex-name="Quadruped T-spine rotation">+ Add video link</button>
+    </div>
+      </div>
+    </li><li data-test-id="shoulder" data-ex-name="Bench thoracic mobilization">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Bench thoracic mobilization" data-test-id="shoulder" data-ex-name="Bench thoracic mobilization" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="shoulder" data-ex-name="Bench thoracic mobilization" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Forearms on bench, sink chest down</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="shoulder" data-ex-name="Bench thoracic mobilization" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="8 breaths" data-test-id="shoulder" data-ex-name="Bench thoracic mobilization" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="shoulder-bench-thoracic-mobilization">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://youtu.be/qovO0ysEpuc?si=nMd1J4uGnRWXXVh7" data-test-id="shoulder" data-ex-name="Bench thoracic mobilization" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link " href="https://youtu.be/qovO0ysEpuc?si=nMd1J4uGnRWXXVh7" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="shoulder" data-ex-name="Bench thoracic mobilization">+ Add video link</button>
+    </div>
+      </div>
+    </li>
+      </ol>
+      <div class="removed-list">
+        <div class="removed-header">Removed (1)</div>
+        <div class="removed-row" data-test-id="shoulder" data-ex-name="Wall angels">
+      <span>Removed: <strong>Wall angels</strong></span>
+      <button type="button" class="ex-restore" data-test-id="shoulder" data-ex-name="Wall angels">Undo</button>
+    </div>
+      </div>
+    </div><div class="program-block" id="block-rotary">
+      <div class="pb-head">
+        <div class="pb-num">03</div>
+        <div class="pb-title">
+          <h3>Rotary Stability</h3>
+          <div class="why">Anti-rotation core control through quadruped and half-kneeling positions.</div>
+        </div>
+        <div class="pb-score">
+          <span class="num s1">1</span>
+          dysfunctional
+        </div>
+      </div>
+      
+      <ol class="pb-exercises">
+        <li data-test-id="rotary" data-ex-name="Dead bug">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Dead bug" data-test-id="rotary" data-ex-name="Dead bug" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="rotary" data-ex-name="Dead bug" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Ribs down, full exhale on extension</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="rotary" data-ex-name="Dead bug" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="8 / side" data-test-id="rotary" data-ex-name="Dead bug" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="rotary-dead-bug">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="" data-test-id="rotary" data-ex-name="Dead bug" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link" href="https://youtu.be/0XVbn86Btj0?si=Fl2i5hBztcbV5FhS" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="rotary" data-ex-name="Dead bug">+ Add video link</button>
+    </div>
+      </div>
+    </li>
+      </ol>
+      <div class="removed-list">
+        <div class="removed-header">Removed (2)</div>
+        <div class="removed-row" data-test-id="rotary" data-ex-name="Quadruped opposite reach">
+      <span>Removed: <strong>Quadruped opposite reach</strong></span>
+      <button type="button" class="ex-restore" data-test-id="rotary" data-ex-name="Quadruped opposite reach">Undo</button>
+    </div><div class="removed-row" data-test-id="rotary" data-ex-name="Bird dog with 3-second hold">
+      <span>Removed: <strong>Bird dog with 3-second hold</strong></span>
+      <button type="button" class="ex-restore" data-test-id="rotary" data-ex-name="Bird dog with 3-second hold">Undo</button>
+    </div>
+      </div>
+    </div><div class="program-block" id="block-pushup">
+      <div class="pb-head">
+        <div class="pb-num">04</div>
+        <div class="pb-title">
+          <h3>Trunk Stability Push-Up</h3>
+          <div class="why">Anterior core + scapular control to transfer force without lumbar lag.</div>
+        </div>
+        <div class="pb-score">
+          <span class="num s1">1</span>
+          dysfunctional
+        </div>
+      </div>
+      
+      <ol class="pb-exercises">
+        <li data-test-id="pushup" data-ex-name="RKC plank">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="RKC plank" data-test-id="pushup" data-ex-name="RKC plank" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="pushup" data-ex-name="RKC plank" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">20 s of maximum total-body tension</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="3" data-test-id="pushup" data-ex-name="RKC plank" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="20 s" data-test-id="pushup" data-ex-name="RKC plank" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="pushup-rkc-plank">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://youtu.be/6TKktamzq4o?si=TRhQQVtwaHinQW_3" data-test-id="pushup" data-ex-name="RKC plank" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link " href="https://youtu.be/6TKktamzq4o?si=TRhQQVtwaHinQW_3" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="pushup" data-ex-name="RKC plank">+ Add video link</button>
+    </div>
+      </div>
+    </li><li data-test-id="pushup" data-ex-name="Modified push-up (knees) with strict spine">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Modified push-up (knees) with strict spine" data-test-id="pushup" data-ex-name="Modified push-up (knees) with strict spine" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="pushup" data-ex-name="Modified push-up (knees) with strict spine" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Body lifts as one piece</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="pushup" data-ex-name="Modified push-up (knees) with strict spine" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="6" data-test-id="pushup" data-ex-name="Modified push-up (knees) with strict spine" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="pushup-modified-push-up-knees-with-strict-spine">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://youtube.com/shorts/jUBh3UZtMp8?si=lkEQsUNlPw2uf04r" data-test-id="pushup" data-ex-name="Modified push-up (knees) with strict spine" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link " href="https://youtube.com/shorts/jUBh3UZtMp8?si=lkEQsUNlPw2uf04r" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="pushup" data-ex-name="Modified push-up (knees) with strict spine">+ Add video link</button>
+    </div>
+      </div>
+    </li><li data-test-id="pushup" data-ex-name="Incline push-up (bench/box)">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Incline push-up (bench/box)" data-test-id="pushup" data-ex-name="Incline push-up (bench/box)" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="pushup" data-ex-name="Incline push-up (bench/box)" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Lower the height as control improves</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="pushup" data-ex-name="Incline push-up (bench/box)" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="6" data-test-id="pushup" data-ex-name="Incline push-up (bench/box)" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="pushup-incline-push-up-bench-box">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="" data-test-id="pushup" data-ex-name="Incline push-up (bench/box)" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link" href="https://youtu.be/yAbg3_pJKvw?si=ry0e7_q7qQUju5qS" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="pushup" data-ex-name="Incline push-up (bench/box)">+ Add video link</button>
+    </div>
+      </div>
+    </li>
+      </ol>
+      <div class="removed-list">
+        <div class="removed-header">Removed (1)</div>
+        <div class="removed-row" data-test-id="pushup" data-ex-name="Dead bug">
+      <span>Removed: <strong>Dead bug</strong></span>
+      <button type="button" class="ex-restore" data-test-id="pushup" data-ex-name="Dead bug">Undo</button>
+    </div>
+      </div>
+    </div><div class="program-block" id="block-hurdle">
+      <div class="pb-head">
+        <div class="pb-num">05</div>
+        <div class="pb-title">
+          <h3>Hurdle Step</h3>
+          <div class="why">Single-leg stance stability + hip flexion mobility on the moving leg.</div>
+        </div>
+        <div class="pb-score">
+          <span class="num s2">2</span>
+          compensated
+        </div>
+      </div>
+      
+      <ol class="pb-exercises">
+        <li data-test-id="hurdle" data-ex-name="Step-up to balance">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Step-up to balance" data-test-id="hurdle" data-ex-name="Step-up to balance" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="hurdle" data-ex-name="Step-up to balance" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">6-inch box, pause at top, no toe push-off</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="hurdle" data-ex-name="Step-up to balance" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="8 / side" data-test-id="hurdle" data-ex-name="Step-up to balance" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="hurdle-step-up-to-balance">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="" data-test-id="hurdle" data-ex-name="Step-up to balance" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link" href="https://youtu.be/aoE7LpTRuXo?si=yEPWNCkAVtbxnhO6" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="hurdle" data-ex-name="Step-up to balance">+ Add video link</button>
+    </div>
+      </div>
+    </li><li data-test-id="hurdle" data-ex-name="Single-leg deadlift patterning">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Single-leg deadlift patterning" data-test-id="hurdle" data-ex-name="Single-leg deadlift patterning" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="hurdle" data-ex-name="Single-leg deadlift patterning" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Hinge to horizontal, hands light on dowel</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="hurdle" data-ex-name="Single-leg deadlift patterning" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="6 / side" data-test-id="hurdle" data-ex-name="Single-leg deadlift patterning" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="hurdle-single-leg-deadlift-patterning">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="" data-test-id="hurdle" data-ex-name="Single-leg deadlift patterning" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link" href="https://youtu.be/gPnUTh0k0kc?si=QGo6QsupEwtHKaxe" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="hurdle" data-ex-name="Single-leg deadlift patterning">+ Add video link</button>
+    </div>
+      </div>
+    </li><li data-test-id="hurdle" data-ex-name="Hip airplane (free)">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Hip airplane (free)" data-test-id="hurdle" data-ex-name="Hip airplane (free)" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="hurdle" data-ex-name="Hip airplane (free)" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Hinge forward, rotate from the stance hip</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="hurdle" data-ex-name="Hip airplane (free)" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="6 / side" data-test-id="hurdle" data-ex-name="Hip airplane (free)" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="hurdle-hip-airplane-free">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="" data-test-id="hurdle" data-ex-name="Hip airplane (free)" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link" href="https://youtu.be/4XCbYaQGF2o?si=UPzY-6AVTH-u3eXT" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="hurdle" data-ex-name="Hip airplane (free)">+ Add video link</button>
+    </div>
+      </div>
+    </li>
+      </ol>
+      
+    </div><div class="program-block" id="block-lunge">
+      <div class="pb-head">
+        <div class="pb-num">06</div>
+        <div class="pb-title">
+          <h3>Inline Lunge</h3>
+          <div class="why">Stability in a narrow base + hip mobility (flexion front leg, extension back leg).</div>
+        </div>
+        <div class="pb-score">
+          <span class="num s2">2</span>
+          compensated
+        </div>
+      </div>
+      
+      <ol class="pb-exercises">
+        <li data-test-id="lunge" data-ex-name="RNT lunge (band at front knee, pulling in)">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="RNT lunge (band at front knee, pulling in)" data-test-id="lunge" data-ex-name="RNT lunge (band at front knee, pulling in)" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="lunge" data-ex-name="RNT lunge (band at front knee, pulling in)" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Resist the pull, push knee out</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="lunge" data-ex-name="RNT lunge (band at front knee, pulling in)" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="6 / side" data-test-id="lunge" data-ex-name="RNT lunge (band at front knee, pulling in)" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="lunge-rnt-lunge-band-at-front-knee-pulling-in">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://youtu.be/n9B2ynSuOWw?si=5dAZ0hEo_I4xPwn-" data-test-id="lunge" data-ex-name="RNT lunge (band at front knee, pulling in)" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link " href="https://youtu.be/n9B2ynSuOWw?si=5dAZ0hEo_I4xPwn-" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="lunge" data-ex-name="RNT lunge (band at front knee, pulling in)">+ Add video link</button>
+    </div>
+      </div>
+    </li><li data-test-id="lunge" data-ex-name="Half-kneeling rotation">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Half-kneeling rotation" data-test-id="lunge" data-ex-name="Half-kneeling rotation" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="lunge" data-ex-name="Half-kneeling rotation" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Stable pelvis, rotate from t-spine only</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="lunge" data-ex-name="Half-kneeling rotation" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="8 / side" data-test-id="lunge" data-ex-name="Half-kneeling rotation" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="lunge-half-kneeling-rotation">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="" data-test-id="lunge" data-ex-name="Half-kneeling rotation" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link" href="https://cdn.jwplayer.com/previews/ISaR0mhn?exp=1777811679&amp;sig=22cae76827afe07051e0845d527db90a" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="lunge" data-ex-name="Half-kneeling rotation">+ Add video link</button>
+    </div>
+      </div>
+    </li>
+      </ol>
+      <div class="removed-list">
+        <div class="removed-header">Removed (1)</div>
+        <div class="removed-row" data-test-id="lunge" data-ex-name="Goblet reverse lunge">
+      <span>Removed: <strong>Goblet reverse lunge</strong></span>
+      <button type="button" class="ex-restore" data-test-id="lunge" data-ex-name="Goblet reverse lunge">Undo</button>
+    </div>
+      </div>
+    </div><div class="program-block" id="block-squat">
+      <div class="pb-head">
+        <div class="pb-num">07</div>
+        <div class="pb-title">
+          <h3>Deep Squat</h3>
+          <div class="why">Compound pattern. Often improves once mobility/stability deficits above are cleared.</div>
+        </div>
+        <div class="pb-score">
+          <span class="num s1">1</span>
+          dysfunctional
+        </div>
+      </div>
+      
+      <ol class="pb-exercises">
+        <li data-test-id="squat" data-ex-name="Knee-to-wall ankle mobility">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="Dorsiflexion from Half Kneeling with Dowel" data-test-id="squat" data-ex-name="Knee-to-wall ankle mobility" data-key="customName" aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete" data-test-id="squat" data-ex-name="Knee-to-wall ankle mobility" title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">Big toe stays down, knee tracks over toes</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="2" data-test-id="squat" data-ex-name="Knee-to-wall ankle mobility" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="10 / side" data-test-id="squat" data-ex-name="Knee-to-wall ankle mobility" data-key="reps">
+          </div>
+        </div>
+        <div class="video-section" data-vs="squat-knee-to-wall-ankle-mobility">
+      <div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V1</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="https://cdn.jwplayer.com/previews/oTo7fGOQ?exp=1777811794&amp;sig=252c9002b03b04d22cf62e6a8bb88aff" data-test-id="squat" data-ex-name="Knee-to-wall ankle mobility" data-key="video" data-video-index="0">
+      </div>
+      <a class="ex-video-link " href="https://cdn.jwplayer.com/previews/oTo7fGOQ?exp=1777811794&amp;sig=252c9002b03b04d22cf62e6a8bb88aff" target="_blank" rel="noopener" title="Watch video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </a>
+      
+    </div>
+      <button type="button" class="video-add" data-test-id="squat" data-ex-name="Knee-to-wall ankle mobility">+ Add video link</button>
+    </div>
+      </div>
+    </li>
+      </ol>
+      <div class="removed-list">
+        <div class="removed-header">Removed (3)</div>
+        <div class="removed-row" data-test-id="squat" data-ex-name="90/90 hip stretch">
+      <span>Removed: <strong>90/90 hip stretch</strong></span>
+      <button type="button" class="ex-restore" data-test-id="squat" data-ex-name="90/90 hip stretch">Undo</button>
+    </div><div class="removed-row" data-test-id="squat" data-ex-name="Goblet squat to box (heel-elevated if needed)">
+      <span>Removed: <strong>Goblet squat to box (heel-elevated if needed)</strong></span>
+      <button type="button" class="ex-restore" data-test-id="squat" data-ex-name="Goblet squat to box (heel-elevated if needed)">Undo</button>
+    </div><div class="removed-row" data-test-id="squat" data-ex-name="Cat-cow">
+      <span>Removed: <strong>Cat-cow</strong></span>
+      <button type="button" class="ex-restore" data-test-id="squat" data-ex-name="Cat-cow">Undo</button>
+    </div>
+      </div>
+    </div><div class="program-priority" style="margin-top: 28px; margin-bottom: 0;">
+      <h3>How To Use This Program</h3>
+      <ol>
+        <li>Run this routine <strong>3–5 days per week</strong>, either as a standalone session or before regular training.</li>
+        <li>Address one block at a time — don't skip ahead. Mobility work first prepares the joint for stability work.</li>
+        <li>Rescreen <strong>every 4 weeks</strong> to track progress and update the prescription.</li>
+        <li>Quality over quantity — if form breaks down, stop the set.</li>
+      </ol>
+    </div></div>
+  </section>
+
+  <!-- Action bar -->
+  <div class="actions">
+    <button class="primary" id="programBtn">Generate program</button>
+    <button id="saveBtn">Save to browser</button>
+    <button id="loadBtn">Load saved</button>
+    <button id="printBtn">Print / PDF</button>
+    <button id="resetBtn">Reset</button>
+    <span class="hint">Saves to this browser only</span>
+  </div>
+
+  <div class="colophon">
+    <span>Coco · FMS · 05/01/2026</span>
+    <span>Hand 16.5 cm · Tibia 44.5 cm</span>
+  </div>
+</div>
+
+<script>
+  // Test definitions: which tests are bilateral vs single
+  const TESTS = [
+    { id: 'squat',    sides: ['squat'] },
+    { id: 'hurdle',   sides: ['hurdle-L', 'hurdle-R'] },
+    { id: 'lunge',    sides: ['lunge-L', 'lunge-R'] },
+    { id: 'shoulder', sides: ['shoulder-L', 'shoulder-R'] },
+    { id: 'aslr',     sides: ['aslr-L', 'aslr-R'] },
+    { id: 'pushup',   sides: ['pushup'] },
+    { id: 'rotary',   sides: ['rotary-L', 'rotary-R'] }
+  ];
+
+  // Clearing test → which test gets zeroed
+  const CLEARS = {
+    clearShoulder:  'shoulder',
+    clearExtension: 'pushup',
+    clearFlexion:   'rotary'
+  };
+
+  function getRadio(name) {
+    const el = document.querySelector(`input[name="${name}"]:checked`);
+    return el ? parseInt(el.closest('label').dataset.val, 10) : null;
+  }
+
+  function setScoreDisplay(testId, finalScore, isAsymmetric) {
+    const article = document.querySelector(`article[data-test="${testId}"]`);
+    const display = article.querySelector('.score-display');
+    const finalEl = display.querySelector('.final');
+    display.classList.remove('flag-zero','flag-one','flag-three');
+    if (finalScore === null) {
+      finalEl.textContent = '—';
+    } else {
+      finalEl.textContent = finalScore;
+      if (finalScore === 0) display.classList.add('flag-zero');
+      else if (finalScore === 1) display.classList.add('flag-one');
+      else if (finalScore === 3) display.classList.add('flag-three');
+    }
+  }
+
+  function recompute() {
+    let total = 0;
+    let scoredCount = 0;
+    let asymCount = 0;
+    let painCount = 0;
+    let lowCount = 0;
+
+    // Apply clearing tests first by overriding radios visually? 
+    // Strategy: just override the FINAL displayed/totaled score if the clearing box is checked.
+    const clearStates = {};
+    Object.keys(CLEARS).forEach(k => {
+      clearStates[CLEARS[k]] = document.getElementById(k).checked;
+    });
+
+    TESTS.forEach(t => {
+      const sideScores = t.sides.map(getRadio);
+      const allFilled = sideScores.every(s => s !== null);
+      const isAsym = t.sides.length > 1;
+
+      let finalScore = null;
+      if (allFilled) {
+        finalScore = Math.min(...sideScores);
+      }
+
+      // Override with clearing test
+      if (clearStates[t.id]) {
+        finalScore = 0;
+      }
+
+      // Asymmetry flag (only if both sides filled & differ)
+      const asymFlagEl = document.querySelector(`.asym-flag[data-flag="${t.id}"]`);
+      if (asymFlagEl) {
+        if (isAsym && allFilled && sideScores[0] !== sideScores[1]) {
+          asymFlagEl.classList.add('show');
+          asymCount++;
+        } else {
+          asymFlagEl.classList.remove('show');
+        }
+      }
+
+      setScoreDisplay(t.id, finalScore, isAsym);
+
+      if (finalScore !== null) {
+        scoredCount++;
+        total += finalScore;
+        if (finalScore === 0) painCount++;
+        if (finalScore < 2) lowCount++;
+      }
+    });
+
+    document.getElementById('totalNum').textContent = scoredCount === 7 ? total : (scoredCount === 0 ? '—' : total + '*');
+    document.getElementById('stampTotal').textContent = scoredCount === 7 ? `${total}/21` : (scoredCount === 0 ? '—' : `${total}/21*`);
+    document.getElementById('testsScored').textContent = `${scoredCount}/7`;
+    document.getElementById('asymCount').textContent = asymCount;
+    document.getElementById('painCount').textContent = painCount;
+    document.getElementById('lowCount').textContent = lowCount;
+
+    // Highlight summary rows when nonzero
+    const summary = document.getElementById('summaryBox');
+    summary.querySelectorAll('.row').forEach((row, i) => {
+      const vals = [scoredCount, asymCount, painCount, lowCount];
+      if (i > 0 && vals[i] > 0) row.classList.add('flag');
+      else row.classList.remove('flag');
+    });
+  }
+
+  // Wire up listeners
+  document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(el => {
+    el.addEventListener('change', recompute);
+  });
+
+  // ──────── Corrective Exercise Database ────────
+  // Each test has tier-1 (deeper deficit) and tier-2 (refinement) options.
+  // Order within each list follows: mobility → motor control → stability/pattern.
+  const CORRECTIVES = {
+    aslr: {
+      label: 'Active Straight-Leg Raise',
+      why: 'Posterior-chain mobility on the moving leg + anterior core stability on the down leg.',
+      hierarchy: 1,
+      asymNote: 'Bias the harder side: 2 sets on the lower-scoring leg, 1 set on the other.',
+      1: [
+        { name: 'Supine hamstring stretch with strap', cue: 'Knee straight, opposite leg pinned to floor', sets: 3, reps: '30 s / side' },
+        { name: 'Banded leg lowering', cue: 'Strap around foot, slow eccentric, low back flat', sets: 2, reps: '8 / side' },
+        { name: 'Dead bug', cue: 'Ribs down, opposite arm/leg, exhale on extension', sets: 2, reps: '8 / side' },
+        { name: '90/90 hip switches', cue: 'Tall posture, drive through heels', sets: 2, reps: '6 / side' }
+      ],
+      2: [
+        { name: 'Active hamstring stretch (toe pull)', cue: 'Move into end range under control', sets: 2, reps: '10 / side' },
+        { name: 'Leg lowering progression', cue: 'Both legs vertical, lower one at a time', sets: 2, reps: '8 / side' },
+        { name: 'Dead bug with band pull-over', cue: 'Resist arch with band tension overhead', sets: 2, reps: '10 / side' }
+      ]
+    },
+    shoulder: {
+      label: 'Shoulder Mobility',
+      why: 'Thoracic spine extension/rotation and shoulder capsule mobility.',
+      hierarchy: 2,
+      asymNote: 'Spend more time on the tighter side — usually the hand reaching down behind the back.',
+      1: [
+        { name: 'Foam-roller T-spine extensions', cue: 'Roller at mid-back, ribs down, support head', sets: 2, reps: '10' },
+        { name: 'Brettzel stretch', cue: 'Side-lying, hold opposite knee + foot, breathe into ribs', sets: 2, reps: '30 s / side' },
+        { name: 'Sleeper stretch', cue: 'Side-lying, gentle internal rotation, no force', sets: 2, reps: '30 s / side' },
+        { name: 'Wall slides', cue: 'Low back + forearms on wall, slide overhead without arching', sets: 2, reps: '10' }
+      ],
+      2: [
+        { name: 'Quadruped T-spine rotation', cue: 'Hand behind head, rotate elbow up', sets: 2, reps: '8 / side' },
+        { name: 'Bench thoracic mobilization', cue: 'Forearms on bench, sink chest down', sets: 2, reps: '8 breaths' },
+        { name: 'Wall angels', cue: 'Maintain contact, slow tempo', sets: 2, reps: '10' }
+      ]
+    },
+    rotary: {
+      label: 'Rotary Stability',
+      why: 'Anti-rotation core control through quadruped and half-kneeling positions.',
+      hierarchy: 3,
+      asymNote: 'Train the harder diagonal first; double the volume on that side.',
+      1: [
+        { name: 'Quadruped opposite reach', cue: 'No rotation, slide hand forward / leg back low', sets: 2, reps: '6 / side' },
+        { name: 'Bird dog with 3-second hold', cue: 'Spine neutral, exhale at end range', sets: 2, reps: '6 / side' },
+        { name: 'Dead bug', cue: 'Ribs down, full exhale on extension', sets: 2, reps: '8 / side' }
+      ],
+      2: [
+        { name: 'Bird dog with elbow-knee touch', cue: 'Round under control, then re-extend', sets: 2, reps: '8 / side' },
+        { name: 'Bear crawl (forward/back)', cue: 'Hips low, opposite limbs, slow', sets: 2, reps: '10 m' },
+        { name: 'Half-kneeling chop or lift', cue: 'Tall posture, resist rotation through cable/band', sets: 2, reps: '6 / side' }
+      ]
+    },
+    pushup: {
+      label: 'Trunk Stability Push-Up',
+      why: 'Anterior core + scapular control to transfer force without lumbar lag.',
+      hierarchy: 4,
+      asymNote: '',
+      1: [
+        { name: 'RKC plank', cue: '20 s of maximum total-body tension', sets: 3, reps: '20 s' },
+        { name: 'Modified push-up (knees) with strict spine', cue: 'Body lifts as one piece', sets: 2, reps: '6' },
+        { name: 'Dead bug', cue: 'Build anterior core endurance', sets: 2, reps: '8 / side' },
+        { name: 'Incline push-up (bench/box)', cue: 'Lower the height as control improves', sets: 2, reps: '6' }
+      ],
+      2: [
+        { name: 'Plank with shoulder taps', cue: 'No hip rotation', sets: 2, reps: '10 / side' },
+        { name: 'Tempo push-up (3 s down, pause)', cue: 'Ribs locked, no sag', sets: 2, reps: '6' },
+        { name: 'Suspended (TRX) push-up', cue: 'Adjust angle to challenge', sets: 2, reps: '6' }
+      ]
+    },
+    hurdle: {
+      label: 'Hurdle Step',
+      why: 'Single-leg stance stability + hip flexion mobility on the moving leg.',
+      hierarchy: 5,
+      asymNote: 'Train balance and hip flexion on the lower-scoring side first.',
+      1: [
+        { name: 'Half-kneeling hip flexor stretch', cue: 'Tuck pelvis, squeeze rear glute', sets: 2, reps: '30 s / side' },
+        { name: 'Single-leg balance (eyes closed)', cue: 'Soft knee, build to 30 s', sets: 2, reps: '30 s / side' },
+        { name: 'High-knee march in place', cue: 'Tall posture, hip above 90°', sets: 2, reps: '10 / side' },
+        { name: 'Wall-supported hip airplane', cue: 'Slow, controlled internal/external rotation', sets: 2, reps: '6 / side' }
+      ],
+      2: [
+        { name: 'Step-up to balance', cue: '6-inch box, pause at top, no toe push-off', sets: 2, reps: '8 / side' },
+        { name: 'Single-leg deadlift patterning', cue: 'Hinge to horizontal, hands light on dowel', sets: 2, reps: '6 / side' },
+        { name: 'Hip airplane (free)', cue: 'Hinge forward, rotate from the stance hip', sets: 2, reps: '6 / side' }
+      ]
+    },
+    lunge: {
+      label: 'Inline Lunge',
+      why: 'Stability in a narrow base + hip mobility (flexion front leg, extension back leg).',
+      hierarchy: 6,
+      asymNote: 'The lower-scoring side is your front-leg deficit — train that stance pattern more.',
+      1: [
+        { name: 'Half-kneeling hip flexor stretch', cue: 'Pelvis tucked, slow breaths', sets: 2, reps: '30 s / side' },
+        { name: 'Split-stance dowel reach', cue: 'Narrow stance, reach overhead without arching', sets: 2, reps: '10 / side' },
+        { name: 'Reverse lunge to box', cue: 'Touch knee softly, drive through front heel', sets: 2, reps: '6 / side' }
+      ],
+      2: [
+        { name: 'RNT lunge (band at front knee, pulling in)', cue: 'Resist the pull, push knee out', sets: 2, reps: '6 / side' },
+        { name: 'Goblet reverse lunge', cue: 'Vertical torso, smooth tempo', sets: 2, reps: '6 / side' },
+        { name: 'Half-kneeling rotation', cue: 'Stable pelvis, rotate from t-spine only', sets: 2, reps: '8 / side' }
+      ]
+    },
+    squat: {
+      label: 'Deep Squat',
+      why: 'Compound pattern. Often improves once mobility/stability deficits above are cleared.',
+      hierarchy: 7,
+      asymNote: '',
+      1: [
+        { name: 'Knee-to-wall ankle mobility', cue: 'Big toe stays down, knee tracks over toes', sets: 2, reps: '10 / side' },
+        { name: '90/90 hip stretch', cue: 'Tall posture, hinge over front shin', sets: 2, reps: '30 s / side' },
+        { name: 'Goblet squat to box (heel-elevated if needed)', cue: 'Sit straight down, knees track toes', sets: 2, reps: '6' },
+        { name: 'Cat-cow', cue: 'Move through full spinal range', sets: 2, reps: '8' }
+      ],
+      2: [
+        { name: 'Goblet squat with 3-s pause at bottom', cue: 'Pry knees out, ribs over hips', sets: 2, reps: '6' },
+        { name: 'Squat to stand (with reach)', cue: 'Walk hands to feet, drop into deep squat, reach overhead', sets: 2, reps: '6' },
+        { name: 'Banded ankle dorsiflexion', cue: 'Band at ankle pulling back, knee over toes', sets: 2, reps: '10 / side' }
+      ]
+    }
+  };
+
+  // ════════ Exercise Customization System ════════
+  // Customizations stored as exerciseCustomizations[`${testId}::${name}`] = {
+  //   sets, reps, videos[], customName, deleted
+  // }
+  let exerciseCustomizations = {};
+
+  const ckey = (testId, name) => `${testId}::${name}`;
+  const escAttr = s => String(s ?? '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const escHTML = s => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+  function exId(name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  }
+
+  // Look up an exercise definition by testId + name
+  function findExercise(testId, exName) {
+    const data = CORRECTIVES[testId];
+    if (!data) return null;
+    for (const score of [1, 2]) {
+      const found = (data[score] || []).find(e => e.name === exName);
+      if (found) return found;
+    }
+    return null;
+  }
+
+  // Get effective values (custom overlaid on default)
+  function getCustom(testId, ex) {
+    const c = exerciseCustomizations[ckey(testId, ex.name)] || {};
+    return {
+      sets: c.sets !== undefined ? c.sets : ex.sets,
+      reps: c.reps !== undefined ? c.reps : ex.reps,
+      videos: Array.isArray(c.videos) ? [...c.videos] : [],
+      customName: c.customName || '',
+      deleted: !!c.deleted
+    };
+  }
+
+  // Ensure the customization record exists, return mutable reference
+  function ensureCustom(testId, exName) {
+    const k = ckey(testId, exName);
+    if (!exerciseCustomizations[k]) exerciseCustomizations[k] = {};
+    return exerciseCustomizations[k];
+  }
+
+  const PLAY_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+
+  // Recommendation hierarchy: lower hierarchy = address first
+  const PROGRAM_ORDER = ['aslr', 'shoulder', 'rotary', 'pushup', 'hurdle', 'lunge', 'squat'];
+
+  // Snapshot of last-generated program state (for partial re-renders)
+  let _programState = { order: [], results: {} };
+
+  // ════════ Render helpers ════════
+
+  function renderVideoRow(testId, exName, index, value, allowRemove) {
+    const empty = !value || !String(value).trim();
+    return `<div class="video-row">
+      <div class="ex-field video">
+        <span class="lab">V${index+1}</span>
+        <input type="url" placeholder="Paste link (YouTube, Vimeo, …)" value="${escAttr(value)}"
+          data-test-id="${testId}" data-ex-name="${escAttr(exName)}"
+          data-key="video" data-video-index="${index}">
+      </div>
+      <a class="ex-video-link ${empty ? 'empty' : ''}"
+         href="${empty ? '#' : escAttr(value)}" target="_blank" rel="noopener"
+         title="${empty ? 'Add a video link to enable' : 'Watch video'}">
+        ${PLAY_ICON}
+      </a>
+      ${allowRemove ? `<button type="button" class="ico-btn video-remove"
+         data-test-id="${testId}" data-ex-name="${escAttr(exName)}"
+         data-video-index="${index}" title="Remove this video slot">×</button>` : ''}
+    </div>`;
+  }
+
+  function renderVideoSection(testId, ex) {
+    const c = getCustom(testId, ex);
+    const videos = c.videos.length > 0 ? c.videos : [''];
+    const allowMore = videos.length < 3;
+    const allowRemove = videos.length > 1;
+    return `<div class="video-section" data-vs="${testId}-${exId(ex.name)}">
+      ${videos.map((v, i) => renderVideoRow(testId, ex.name, i, v, allowRemove)).join('')}
+      ${allowMore ? `<button type="button" class="video-add"
+        data-test-id="${testId}" data-ex-name="${escAttr(ex.name)}">+ Add video link</button>` : ''}
+    </div>`;
+  }
+
+  function renderExercise(testId, ex) {
+    const c = getCustom(testId, ex);
+    if (c.deleted) return '';
+    const displayName = c.customName || ex.name;
+    return `<li data-test-id="${testId}" data-ex-name="${escAttr(ex.name)}">
+      <div class="ex-content">
+        <div class="ex-head-row">
+          <input type="text" class="ex-name-input" value="${escAttr(displayName)}"
+            data-test-id="${testId}" data-ex-name="${escAttr(ex.name)}" data-key="customName"
+            aria-label="Exercise name (editable)" title="Click to edit name">
+          <button type="button" class="ico-btn ex-delete"
+            data-test-id="${testId}" data-ex-name="${escAttr(ex.name)}"
+            title="Remove this exercise from the program">×</button>
+        </div>
+        <div class="ex-cue">${escHTML(ex.cue)}</div>
+        <div class="ex-controls-row">
+          <div class="ex-field sets">
+            <span class="lab">Sets</span>
+            <input type="number" min="1" max="20" value="${c.sets}"
+              data-test-id="${testId}" data-ex-name="${escAttr(ex.name)}" data-key="sets" inputmode="numeric">
+          </div>
+          <div class="ex-field reps">
+            <span class="lab">Reps</span>
+            <input type="text" value="${escAttr(c.reps)}"
+              data-test-id="${testId}" data-ex-name="${escAttr(ex.name)}" data-key="reps">
+          </div>
+        </div>
+        ${renderVideoSection(testId, ex)}
+      </div>
+    </li>`;
+  }
+
+  function renderRemoved(testId, ex) {
+    return `<div class="removed-row" data-test-id="${testId}" data-ex-name="${escAttr(ex.name)}">
+      <span>Removed: <strong>${escHTML(ex.name)}</strong></span>
+      <button type="button" class="ex-restore"
+        data-test-id="${testId}" data-ex-name="${escAttr(ex.name)}">Undo</button>
+    </div>`;
+  }
+
+  function renderBlock(testId, score, asym, idx) {
+    const data = CORRECTIVES[testId];
+    const exercises = data[score] || [];
+    const visible = exercises.filter(ex => !getCustom(testId, ex).deleted);
+    const removed = exercises.filter(ex => getCustom(testId, ex).deleted);
+
+    return `<div class="program-block" id="block-${testId}">
+      <div class="pb-head">
+        <div class="pb-num">${String(idx+1).padStart(2,'0')}</div>
+        <div class="pb-title">
+          <h3>${data.label}</h3>
+          <div class="why">${escHTML(data.why)}</div>
+        </div>
+        <div class="pb-score">
+          <span class="num s${score}">${score}</span>
+          ${score === 1 ? 'dysfunctional' : 'compensated'}
+        </div>
+      </div>
+      ${asym && data.asymNote ? `<div class="pb-asym">⚠ Asymmetry — ${escHTML(data.asymNote)}</div>` : ''}
+      ${visible.length ? `<ol class="pb-exercises">
+        ${visible.map(ex => renderExercise(testId, ex)).join('')}
+      </ol>` : '<div class="program-empty" style="padding: 16px;">All exercises removed for this block. Restore one below or add custom work outside this tool.</div>'}
+      ${removed.length ? `<div class="removed-list">
+        <div class="removed-header">Removed (${removed.length})</div>
+        ${removed.map(ex => renderRemoved(testId, ex)).join('')}
+      </div>` : ''}
+    </div>`;
+  }
+
+  // Surgical re-render of a single block (preserves state of other blocks)
+  function regenerateBlock(testId) {
+    const idx = _programState.order.indexOf(testId);
+    const r = _programState.results[testId];
+    if (idx < 0 || !r) return;
+    const blockEl = document.getElementById(`block-${testId}`);
+    if (!blockEl) return;
+    const tmp = document.createElement('div');
+    tmp.innerHTML = renderBlock(testId, r.final, r.asym, idx);
+    blockEl.replaceWith(tmp.firstElementChild);
+  }
+
+  // Surgical re-render of just the video section for one exercise
+  function regenerateVideoSection(testId, exName) {
+    const ex = findExercise(testId, exName);
+    if (!ex) return;
+    const sectionEl = document.querySelector(`[data-vs="${testId}-${exId(exName)}"]`);
+    if (!sectionEl) return;
+    const tmp = document.createElement('div');
+    tmp.innerHTML = renderVideoSection(testId, ex);
+    sectionEl.replaceWith(tmp.firstElementChild);
+  }
+
+  // ════════ Main program generation ════════
+
+  function generateProgram() {
+    const programEl = document.getElementById('program');
+    const body = document.getElementById('programBody');
+
+    const results = {};
+    let total = 0, scored = 0;
+    const clearStates = {};
+    Object.keys(CLEARS).forEach(k => {
+      clearStates[CLEARS[k]] = document.getElementById(k).checked;
+    });
+
+    TESTS.forEach(t => {
+      const sideScores = t.sides.map(getRadio);
+      const allFilled = sideScores.every(s => s !== null);
+      let finalScore = allFilled ? Math.min(...sideScores) : null;
+      if (clearStates[t.id]) finalScore = 0;
+      const isAsym = t.sides.length > 1 && allFilled && sideScores[0] !== sideScores[1];
+      results[t.id] = { final: finalScore, sides: sideScores, asym: isAsym };
+      if (finalScore !== null) { total += finalScore; scored++; }
+    });
+
+    if (scored === 0) {
+      body.innerHTML = '<div class="program-empty">Score at least one test, then generate again.</div>';
+      programEl.hidden = false;
+      programEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    const today = new Date().toLocaleDateString('en-CA', { year:'numeric', month:'long', day:'numeric' });
+    document.getElementById('progDate').textContent = today;
+    document.getElementById('progScoreLine').textContent = `Composite ${total} / 21 · ${scored}/7 tests scored`;
+
+    let html = '';
+
+    const painTests = Object.entries(results)
+      .filter(([_, r]) => r.final === 0)
+      .map(([id]) => CORRECTIVES[id].label);
+    if (painTests.length) {
+      html += `<div class="program-banner">
+        <strong>Medical Clearance Required</strong>
+        Pain reported on: ${painTests.join(', ')}. Refer to a qualified healthcare provider before loading these patterns. Corrective work below is held until cleared.
+      </div>`;
+    }
+
+    const needsWork = PROGRAM_ORDER
+      .filter(id => results[id].final !== null && results[id].final > 0 && results[id].final < 3);
+
+    if (needsWork.length) {
+      html += `<div class="program-priority">
+        <h3>Priority Order — Work in This Sequence</h3>
+        <ol>${needsWork.map(id => {
+          const score = results[id].final;
+          const asym = results[id].asym ? '<span class="badge bad">asym</span>' : '';
+          const sBadge = score === 1 ? '<span class="badge warn">score 1</span>' : '<span class="badge">score 2</span>';
+          return `<li><strong>${CORRECTIVES[id].label}</strong> ${sBadge}${asym}</li>`;
+        }).join('')}</ol>
+      </div>`;
+    }
+
+    if (!needsWork.length && !painTests.length) {
+      html += `<div class="program-clean">
+        <div class="big">All Patterns Clean</div>
+        <div class="small">Every scored test came in at 3. Continue with normal training; rescreen periodically.</div>
+      </div>`;
+    }
+
+    needsWork.forEach((id, idx) => {
+      html += renderBlock(id, results[id].final, results[id].asym, idx);
+    });
+
+    html += `<div class="program-priority" style="margin-top: 28px; margin-bottom: 0;">
+      <h3>How To Use This Program</h3>
+      <ol>
+        <li>Run this routine <strong>3–5 days per week</strong>, either as a standalone session or before regular training.</li>
+        <li>Address one block at a time — don't skip ahead. Mobility work first prepares the joint for stability work.</li>
+        <li>Rescreen <strong>every 4 weeks</strong> to track progress and update the prescription.</li>
+        <li>Quality over quantity — if form breaks down, stop the set.</li>
+      </ol>
+    </div>`;
+
+    body.innerHTML = html;
+    programEl.hidden = false;
+
+    // Snapshot for surgical re-renders
+    _programState = { order: needsWork, results };
+
+    programEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.getElementById('programBtn').addEventListener('click', generateProgram);
+
+  // ════════ Event delegation for program interactions ════════
+
+  const programBody = document.getElementById('programBody');
+
+  programBody.addEventListener('click', (e) => {
+    const target = e.target;
+
+    const deleteBtn = target.closest('.ex-delete');
+    if (deleteBtn) {
+      const { testId, exName } = deleteBtn.dataset;
+      ensureCustom(testId, exName).deleted = true;
+      regenerateBlock(testId);
+      return;
+    }
+
+    const restoreBtn = target.closest('.ex-restore');
+    if (restoreBtn) {
+      const { testId, exName } = restoreBtn.dataset;
+      ensureCustom(testId, exName).deleted = false;
+      regenerateBlock(testId);
+      return;
+    }
+
+    const addVideoBtn = target.closest('.video-add');
+    if (addVideoBtn) {
+      const { testId, exName } = addVideoBtn.dataset;
+      const c = ensureCustom(testId, exName);
+      if (!Array.isArray(c.videos)) c.videos = [];
+      // If empty, the rendered "1 slot" was virtual — push two now to give 2 slots
+      if (c.videos.length === 0) c.videos = ['', ''];
+      else c.videos.push('');
+      regenerateVideoSection(testId, exName);
+      // Focus the newly-added (last empty) input
+      const sectionEl = document.querySelector(`[data-vs="${testId}-${exId(exName)}"]`);
+      if (sectionEl) {
+        const inputs = sectionEl.querySelectorAll('input[data-key="video"]');
+        if (inputs.length) inputs[inputs.length - 1].focus();
+      }
+      return;
+    }
+
+    const removeVideoBtn = target.closest('.video-remove');
+    if (removeVideoBtn) {
+      const { testId, exName, videoIndex } = removeVideoBtn.dataset;
+      const c = ensureCustom(testId, exName);
+      if (Array.isArray(c.videos)) {
+        c.videos.splice(parseInt(videoIndex, 10), 1);
+        regenerateVideoSection(testId, exName);
+      }
+      return;
+    }
+  });
+
+  programBody.addEventListener('input', (e) => {
+    const input = e.target;
+    if (!input.matches('input[data-key]')) return;
+    const { testId, exName, key, videoIndex } = input.dataset;
+    if (!testId || !exName) return;
+    const c = ensureCustom(testId, exName);
+    let val = input.value;
+
+    if (key === 'sets') {
+      val = parseInt(val, 10);
+      if (isNaN(val) || val < 1) val = 1;
+      c.sets = val;
+    } else if (key === 'reps') {
+      c.reps = val;
+    } else if (key === 'customName') {
+      c.customName = val;
+    } else if (key === 'video') {
+      if (!Array.isArray(c.videos)) c.videos = [];
+      const idx = parseInt(videoIndex, 10);
+      while (c.videos.length <= idx) c.videos.push('');
+      c.videos[idx] = val;
+      // Update the play link visually without full re-render
+      const link = input.closest('.video-row').querySelector('.ex-video-link');
+      if (link) {
+        const empty = !val.trim();
+        link.classList.toggle('empty', empty);
+        link.href = empty ? '#' : val;
+        link.title = empty ? 'Add a video link to enable' : 'Watch video';
+      }
+    }
+  });
+
+  // ──────── Save / Load / Print / Reset ────────
+  const STORAGE_KEY = 'coco_fms_2026_05_01';
+
+  function gather() {
+    const data = { radios: {}, checks: {}, notes: {}, screener: '', exercises: exerciseCustomizations };
+    document.querySelectorAll('input[type="radio"]:checked').forEach(el => {
+      data.radios[el.name] = el.closest('label').dataset.val;
+    });
+    document.querySelectorAll('input[type="checkbox"]').forEach(el => {
+      data.checks[el.id] = el.checked;
+    });
+    document.querySelectorAll('textarea.notes-field').forEach(el => {
+      data.notes[el.dataset.test] = el.value;
+    });
+    data.screener = document.getElementById('screener').value;
+    return data;
+  }
+
+  function apply(data) {
+    if (!data) return;
+    // clear first
+    document.querySelectorAll('input[type="radio"]').forEach(el => el.checked = false);
+    Object.entries(data.radios || {}).forEach(([name, val]) => {
+      const sel = document.querySelector(`input[name="${name}"]`);
+      if (!sel) return;
+      const labels = document.querySelectorAll(`input[name="${name}"]`);
+      labels.forEach(l => {
+        if (l.closest('label').dataset.val === val) l.checked = true;
+      });
+    });
+    Object.entries(data.checks || {}).forEach(([id, v]) => {
+      const el = document.getElementById(id);
+      if (el) el.checked = v;
+    });
+    Object.entries(data.notes || {}).forEach(([k, v]) => {
+      const el = document.querySelector(`textarea[data-test="${k}"]`);
+      if (el) el.value = v;
+    });
+    document.getElementById('screener').value = data.screener || '';
+    exerciseCustomizations = data.exercises || {};
+    // Migrate any old-format records: keys without "::" or with single "video" string
+    Object.keys(exerciseCustomizations).forEach(k => {
+      const c = exerciseCustomizations[k];
+      // Old: key was just exerciseName; convert by finding which test(s) contain it
+      if (!k.includes('::')) {
+        for (const testId in CORRECTIVES) {
+          for (const score of [1, 2]) {
+            const list = CORRECTIVES[testId][score] || [];
+            if (list.some(ex => ex.name === k)) {
+              const newKey = ckey(testId, k);
+              if (!exerciseCustomizations[newKey]) {
+                exerciseCustomizations[newKey] = { ...c };
+              }
+            }
+          }
+        }
+        delete exerciseCustomizations[k];
+        return;
+      }
+      // Old: { video: 'url' } → { videos: ['url'] }
+      if (c.video !== undefined && !c.videos) {
+        c.videos = c.video ? [c.video] : [];
+        delete c.video;
+      }
+      if (!c.videos) c.videos = [];
+    });
+    recompute();
+    // If the program section was open, regenerate it with the loaded customizations
+    const programEl = document.getElementById('program');
+    if (programEl && !programEl.hidden) {
+      generateProgram();
+    }
+  }
+
+  document.getElementById('saveBtn').addEventListener('click', () => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(gather()));
+      flashBtn('saveBtn', 'Saved ✓');
+    } catch (e) { alert('Save failed: ' + e.message); }
+  });
+
+  document.getElementById('loadBtn').addEventListener('click', () => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) { flashBtn('loadBtn', 'Nothing saved'); return; }
+      apply(JSON.parse(raw));
+      flashBtn('loadBtn', 'Loaded ✓');
+    } catch (e) { alert('Load failed: ' + e.message); }
+  });
+
+  document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    if (!confirm('Clear all entries on this form? (This does not delete a saved copy.)')) return;
+    document.querySelectorAll('input[type="radio"]').forEach(el => el.checked = false);
+    document.querySelectorAll('input[type="checkbox"]').forEach(el => el.checked = false);
+    document.querySelectorAll('textarea.notes-field').forEach(el => el.value = '');
+    document.getElementById('screener').value = '';
+    exerciseCustomizations = {};
+    document.getElementById('program').hidden = true;
+    recompute();
+  });
+
+  function flashBtn(id, msg) {
+    const btn = document.getElementById(id);
+    const original = btn.textContent;
+    btn.textContent = msg;
+    setTimeout(() => btn.textContent = original, 1400);
+  }
+
+  // initial paint
+  recompute();
+</script>
+
+
+</body></html>
